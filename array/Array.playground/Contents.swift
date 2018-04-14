@@ -50,13 +50,47 @@ print("Задача 3.")
 print(arrayInt)
 
 //4. Сформировать массив из элементов арифметической прогрессии с заданным первым элементом x и разностью d.
+arrayInt = []
+arrayCount = 20
+var x = 4
+var d = 3
 
+for _ in 1...arrayCount {
+    if arrayInt.isEmpty {
+        arrayInt.append(x)
+    } else {
+        arrayInt.append(arrayInt.last! + d)
+    }
+}
+
+print("Задача 4.")
+print(arrayInt)
 
 //5. Сформировать возрастающий массив из четных чисел.
+arrayInt = []
+arrayCount = 20
 
+for i in 1...arrayCount {
+    if i % 2 == 0 {
+        arrayInt.append(i)
+    }
+}
+
+print("Задача 5.")
+print(arrayInt)
 
 //6. Сформировать убывающий массив из чисел, которые делятся на 3.
+arrayInt = []
+arrayCount = 20
 
+for i in 1...arrayCount {
+    if i % 3 == 0 {
+        arrayInt.insert(i, at: 0)
+    }
+}
+
+print("Задача 6.")
+print(arrayInt)
 
 //7. Создать массив из n первых чисел Фибоначчи.
 
