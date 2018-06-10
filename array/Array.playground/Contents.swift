@@ -5,10 +5,10 @@ import Foundation
 
                                     //Заполнение массива
 //
-//1.Заполнить массив нулями, кроме первого и последнего элементов, которые должны быть равны единице.
+//1. Заполнить массив нулями, кроме первого и последнего элементов, которые должны быть равны единице.
 
 var arrayInt = [Int]()
-var arrayCount = 5
+var arrayCount = 10
 
 for i in 1...arrayCount {
     switch i {
@@ -19,9 +19,9 @@ for i in 1...arrayCount {
     }
 }
 
-print("Задача1. \(arrayInt)")
+print("Задача 1. \(arrayInt)")
 
-//2.Заполнить массив нулями и единицами, при этом данные значения чередуются, начиная с нуля.
+//2. Заполнить массив нулями и единицами, при этом данные значения чередуются, начиная с нуля.
 arrayInt = []
 arrayCount = 10
 
@@ -39,7 +39,7 @@ print("Задача 2. \(arrayInt)")
 arrayInt = []
 arrayCount = 10
 
-for i in 1...arrayCount {
+for i in 1...arrayCount * 2 {
     if i % 2 != 0 {
         arrayInt.append(i)
     }
@@ -65,9 +65,9 @@ print("Задача 4. \(arrayInt)")
 
 //5. Сформировать возрастающий массив из четных чисел.
 arrayInt = []
-arrayCount = 20
+arrayCount = 10
 
-for i in 1...arrayCount {
+for i in 1...arrayCount * 2{
     if i % 2 == 0 {
         arrayInt.append(i)
     }
@@ -107,7 +107,9 @@ arrayCount = 13
 var primeNum = 2
 
 while arrayInt.count == arrayCount {
-    
+    //
+    //Решение
+    //
 }
 
 print("Задача 8. \(arrayInt)")
@@ -235,7 +237,20 @@ print(arrayInt.count)
 
 
 //16. Создайте массив, в котором количество отрицательных чисел равно количеству положительных и положительные числа расположены на случайных местах в массиве.
+arrayInt = []
+arrayCount = 20
 
+for _ in 1...arrayCount {
+    let num = (Int(arc4random_uniform(9)) + 1) * -1
+    arrayInt.append(Int(num))
+}
+
+for _ in 1...arrayCount / 2 {
+    let num = Int(arc4random_uniform(9))
+    arrayInt[Int(arc4random_uniform(UInt32(arrayInt.count)))] = num
+}
+
+print("Задача 16. \(arrayInt)")
 
 //17. Заполните массив случайным образом нулями, единицами и двойками так, чтобы первая двойка в массиве встречалась раньше первой единицы, количество единиц было в точности равно суммарному количеству нулей и двоек.
 
